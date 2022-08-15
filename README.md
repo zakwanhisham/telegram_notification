@@ -32,3 +32,9 @@ or
 - Don't have any idea yet on how to make this program. Maybe for the POC, can just show a simple conversation
 - Need to figure out how can the bot start the conversation. According to the official docs, bots cannot start the conversation. Maybe can make it spit out something by linking with the API for notification? **_MAYBE_**
 - **_IMPORTANT_** Do not share this with anyone, but who cares.
+
+
+### ISSUES AND IMPROVEMENTS
+- There is some bug at check in and check out part
+- Need to make database for the "check in" and "check out" function
+- Connect to the existing API so that we can generate the things we want 
