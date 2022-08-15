@@ -33,7 +33,6 @@ or
 - Need to figure out how can the bot start the conversation. According to the official docs, bots cannot start the conversation. Maybe can make it spit out something by linking with the API for notification? **_MAYBE_**
 - **_IMPORTANT_** Do not share this with anyone, but who cares.
 
-
 ### ISSUES AND IMPROVEMENTS
 - There is some bug at check in and check out part
 - Need to make database for the "check in" and "check out" function
