@@ -26,7 +26,7 @@ pub enum Command {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
-    pretty_env_logger::init; // Need to export TELOXIDE_TOKEN="telegram token"
+    pretty_env_logger::init(); // Need to export TELOXIDE_TOKEN=5798757345:AAEryOQmaspsuctg56H1_svQY0aGpyaAnd4
     log::info!("Starting the notification bot ...");
 
     let bot = Bot::from_env().auto_send();
@@ -63,6 +63,11 @@ fn make_keyboard() -> InlineKeyboardMarkup {
     InlineKeyboardMarkup::new(keyboard)
 }
 
+// fn make_names()->String {
+//     let name = ["Abi", "Abu", "Ali", "Badrul", "Borhan", "Bedol"];
+
+// }
+
 // Parse the text wrote on Telegram and check if that is a valid command
 // or not, then march the command. If the command is `/Start`, it writes a
 // markup with the `InlineKeyboardMarkup`.
@@ -87,12 +92,16 @@ async fn message_handler(
             Ok(Command::CheckIn) => {
                 // Create a list of buttons and send mock status.
                 let keyboard = make_keyboard();
-                bot.send_message(m.chat.id, "Check In!").reply_markup(keyboard).await?;
+                bot.send_message(m.chat.id, "Some people has check in")
+                    .reply_markup(keyboard)
+                    .await?;
             }
             Ok(Command::CheckOut) => {
                 // Create a list of buttons and send mock status.
                 let keyboard = make_keyboard();
-                bot.send_message(m.chat.id, "Check Out!").reply_markup(keyboard).await?;
+                bot.send_message(m.chat.id, "Some people has check out ")
+                    .reply_markup(keyboard)
+                    .await?;
             }
             Err(_) => {
                 bot.send_message(
